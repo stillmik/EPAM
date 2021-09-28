@@ -1,9 +1,7 @@
 package park;
 
 import plants.Plant;
-
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Park {
 
@@ -12,6 +10,7 @@ public class Park {
     private ArrayList<ParkObject> parkObjects = new ArrayList<>();
 
     private int quantOfPlants = 0;
+
     private double totalHeight = 0;
 
     public Park(ArrayList<Plant> plants) {
@@ -46,7 +45,6 @@ public class Park {
     }
 
     private void plantPark() {
-
         for (ParkObject parkObject : parkObjects) {
             for (Plant plant : plants) {
                 plantEqualsParkObject(parkObject,plant);
@@ -66,4 +64,10 @@ public class Park {
         return parkObjects;
     }
 
+    public int getQuantOfPlants() {
+        return quantOfPlants;
+    }
+    public double getTotalHeight() {
+        return totalHeight;
+    }
 }

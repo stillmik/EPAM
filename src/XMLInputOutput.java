@@ -55,7 +55,7 @@ class XMLInputOutput {
         return plant;
     }
 
-    static void getPlantedParkXML(ArrayList<ParkObject> parkObjects) {
+    static void getPlantedParkXML(ArrayList<ParkObject> parkObjects,int quant,double height) {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
 
@@ -63,6 +63,8 @@ class XMLInputOutput {
             builder = factory.newDocumentBuilder();
             Document doc = builder.newDocument();
             Element rootElement = doc.createElement("Park");
+            rootElement.setAttribute("quantityOfPants", String.valueOf(quant));
+            rootElement.setAttribute("totalHeight", String.valueOf(height));
             doc.appendChild(rootElement);
             for (ParkObject parkObject : parkObjects) {
                 Element parkObjElem = doc.createElement(parkObject.getPlace());

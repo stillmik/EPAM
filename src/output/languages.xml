@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Park>
+<Park quantityOfPants="51" totalHeight="105.75">
     <greenhouse>
         <plant>
             <name>narcissus</name>
